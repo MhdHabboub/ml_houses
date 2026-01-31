@@ -15,7 +15,7 @@ st.set_page_config(
 # --------------------------------------------------
 @st.cache_resource
 def load_model():
-    return joblib.load("housing_price_model.pkl")
+    return joblib.load("housing_price_model.joblib")
 
 model = load_model()
 
@@ -134,3 +134,4 @@ if st.button("💰 Predict House Value"):
     )
 
     st.caption("Prediction generated using a Random Forest model trained on California housing data.")
+
